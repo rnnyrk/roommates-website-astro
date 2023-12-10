@@ -1,0 +1,18 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.roommates",
+      "sha256_cert_fingerprints": ["64:15:63:8F:4B:DF:6D:53:7C:3E:15:36:1F:42:A2:84:6E:E9:2A:21:EB:73:E8:C9:DD:B8:CD:C9:AE:AC:4C:AC"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.roommates.dev",
+      "sha256_cert_fingerprints": ["B7:D7:2D:96:50:39:D7:F0:2C:D6:2F:81:81:7F:16:A2:0F:02:4D:C7:68:36:8A:BD:0C:02:F5:07:5E:57:71:25"]
+    }
+  }
+]

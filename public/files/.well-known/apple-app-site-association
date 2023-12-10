@@ -1,0 +1,25 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+        {
+          "appIDs": ["WPYLA7AC24.com.jrwd.roommates", "WPYLA7AC24.com.jrwd.roommates.dev"],
+          "components": [
+            {
+               "#": "no_universal_links",
+               "exclude": true,
+               "comment": "Matches any URL whose fragment equals no_universal_links and instructs the system not to open it as a universal link"
+            },
+            {
+               "/": "/join/*",
+               "comment": "Matches any URL whose path starts with /join/"
+            },
+            {
+               "/": "/event/*",
+               "comment": "Matches any URL whose path starts with /event/"
+            }
+          ]
+        }
+      ]
+  }
+}
