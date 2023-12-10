@@ -1,0 +1,41 @@
+<footer class="footer">
+  Voor contact of support, mail naar
+  <a
+    href="mailto:info@roommatesapp.nl"
+    target="_blank"
+    rel="noreferrer"
+  >
+    info@roommatesapp.nl
+  </a>
+</footer>
+
+<style>
+  .footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0;
+    padding: 24px;
+    text-align: center;
+    color: rgb(var(--white));
+    border-top: 1px solid rgb(var(--orangeLight));
+  }
+
+  .footer a {
+    color: rgb(var(--white));
+    text-decoration: underline;
+    margin-left: 4px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .footer {
+      margin-top: 60px;
+      width: 750px;
+    }
+
+    .footer a:hover {
+      color: rgb(var(--black));
+    }
+  }
+</style>
