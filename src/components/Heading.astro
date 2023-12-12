@@ -1,0 +1,42 @@
+---
+import { cn } from '@utils/cn';
+
+type Props = {
+  className?: string;
+  color?: 'white' | 'black' | 'primary';
+  renderAs?: 'h1' | 'h2' | 'h3';
+  weight?: 'bold' | 'semibold' | 'regular';
+};
+
+const { color, className, renderAs = 'h1', weight } = Astro.props;
+
+const classes = cn(`font-[var(--font-rubik)] ${className || ''}`, {
+  [`text-${color}`]: Boolean(color),
+  'font-bold': weight === 'bold',
+  'font-semibold': weight === 'semibold',
+});
+---
+
+{
+  renderAs === 'h3' && (
+    <h3 class={`text-lg ${classes}`}>
+      <slot />
+    </h3>
+  )
+}
+
+{
+  renderAs === 'h2' && (
+    <h2 class={`text-xl ${classes}`}>
+      <slot />
+    </h2>
+  )
+}
+
+{
+  renderAs === 'h1' && (
+    <h1 class={`text-2xl ${classes}`}>
+      <slot />
+    </h1>
+  )
+}
