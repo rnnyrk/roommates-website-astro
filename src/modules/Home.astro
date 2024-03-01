@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 
-import { Button } from '@components/Button.tsx';
 import Container from '@components/Container.astro';
+import Socials from '@components/Socials.astro';
 import EventsImage from '@public/images/events.jpg';
 ---
 
@@ -20,18 +20,7 @@ import EventsImage from '@public/images/events.jpg';
       <li>Notificaties bij updates van jullie huis</li>
     </ul>
 
-    <div class="socials">
-      <Button
-        href="https://apps.apple.com/app/id1523528110"
-        type="Apple"
-        title="App Store"
-      />
-      <Button
-        href="https://play.google.com/store/apps/details?id=com.roommates"
-        type="Google"
-        title="Play Store"
-      />
-    </div>
+    <Socials />
   </article>
 
   <figure class="images">
@@ -53,7 +42,7 @@ import EventsImage from '@public/images/events.jpg';
   }
 
   .content strong {
-    font-weight: 800;
+    font-weight: 600;
   }
 
   @media only screen and (min-width: 768px) {
@@ -73,13 +62,6 @@ import EventsImage from '@public/images/events.jpg';
 
   .usp li {
     margin-bottom: 16px;
-  }
-
-  .socials {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
   }
 
   .images {
