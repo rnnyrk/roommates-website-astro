@@ -8,7 +8,7 @@ import vercel from '@astrojs/vercel/static';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind(), sitemap()],
-  output: 'static',
+  output: 'server',
   adapter: vercel({
     imageService: false,
     webAnalytics: {
