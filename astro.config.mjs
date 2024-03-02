@@ -10,7 +10,6 @@ export default defineConfig({
   integrations: [react(), tailwind(), sitemap()],
   output: 'server',
   adapter: vercel({
-    imageService: false,
     webAnalytics: {
       enabled: true,
     },
