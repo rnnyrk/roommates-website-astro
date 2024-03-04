@@ -36,7 +36,7 @@ import EventsImage from '../assets/events.jpg';
 <style>
   .content {
     flex-basis: 100%;
-    padding: 40px 16px 0;
+    padding: 40px 0 0;
     font-size: 18px;
     line-height: 24px;
     color: rgb(var(--white));
@@ -66,8 +66,8 @@ import EventsImage from '../assets/events.jpg';
   }
 
   .images {
+    display: none;
     position: relative;
-    display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
@@ -76,5 +76,11 @@ import EventsImage from '../assets/events.jpg';
     max-width: 400px;
     margin: 40px auto 0;
     padding: 0 40px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .images {
+      display: flex;
+    }
   }
 </style>
