@@ -1,0 +1,28 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import Socials from '@components/Socials.astro';
+
+type Props = {
+  className?: string;
+  title: string;
+  showSocials?: boolean;
+};
+
+const { className, title, showSocials = false } = Astro.props;
+---
+
+<Layout title={title}>
+  <Container className={className}>
+    <slot />
+    {showSocials && <Socials />}
+  </Container>
+</Layout>
+
+<style>
+  p,
+  i {
+    font-size: 16px;
+    color: white;
+  }
+</style>
