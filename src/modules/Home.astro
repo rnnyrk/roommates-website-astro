@@ -16,9 +16,7 @@ const { text, usps } = Astro.props;
 
 <Container>
   <article class="content">
-    <strong>
-      {text}
-    </strong>
+    <strong set:html={text} />
 
     <ul class="usp">
       {
