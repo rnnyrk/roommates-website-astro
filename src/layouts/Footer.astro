@@ -1,12 +1,26 @@
+---
+import { getLangFromUrl, useTranslations } from '@locale/utils';
+import { languages } from '@locale/general';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <footer class="footer">
-  Voor contact of support, mail naar
-  <a
-    href="mailto:info@roommatesapp.nl"
-    target="_blank"
-    rel="noreferrer"
-  >
-    info@roommatesapp.nl
-  </a>
+  <p>
+    {t('footer.text')}
+    <a
+      href="mailto:info@roommatesapp.nl"
+      target="_blank"
+      rel="noreferrer"
+    >
+      info@roommatesapp.nl
+    </a>
+  </p>
+
+  <div class="languages">
+    {Object.entries(languages).map(([lang, label]) => <a href={`/${lang}/`}>{label}</a>)}
+  </div>
 </footer>
 
 <style>
@@ -31,7 +45,6 @@
 
   @media only screen and (min-width: 768px) {
     .footer {
-      flex-direction: row;
       margin-top: 60px;
       width: 750px;
     }
@@ -39,5 +52,14 @@
     .footer a:hover {
       color: rgb(var(--black));
     }
+  }
+
+  .languages {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .languages a {
+    padding: 8px;
   }
 </style>

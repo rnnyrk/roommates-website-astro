@@ -5,20 +5,27 @@ import Container from '@components/Container.astro';
 import Socials from '@components/Socials.astro';
 
 import EventsImage from '../assets/events.jpg';
+
+type Props = {
+  text: string;
+  usps: string[];
+};
+
+const { text, usps } = Astro.props;
 ---
 
 <Container>
   <article class="content">
     <strong>
-      Dé app voor jou en je huisgenoten. Alles voor jullie huis in één app.<br />
-      <br /> Download nu de gratis Roommates app en jullie kunnen gelijk:
+      {text}
     </strong>
 
     <ul class="usp">
-      <li>Een boodschappenlijst delen</li>
-      <li>Maak schoonmaakroosters</li>
-      <li>Evenementen maken en je aanwezigheid delen</li>
-      <li>Notificaties bij updates van jullie huis</li>
+      {
+        usps.map((usp, index) => {
+          return <li>{usp}</li>;
+        })
+      }
     </ul>
 
     <Socials />
