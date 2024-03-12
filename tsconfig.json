@@ -12,6 +12,7 @@
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@locale/*": ["src/i18n/*"],
       "@modules/*": ["src/modules/*"],
       "@utils/*": ["src/utils/*"]
     },

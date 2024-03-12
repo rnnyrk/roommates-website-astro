@@ -1,18 +1,21 @@
 ---
 import '@fontsource/rubik';
-import "@fontsource/rubik/600.css";
+import '@fontsource/rubik/600.css';
 import Header from '@layouts/Header.astro';
 import Footer from '@layouts/Footer.astro';
+import { getLangFromUrl } from '@locale/utils';
 
 type Props = {
   title: string;
 };
 
 const { title } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="nl">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta
